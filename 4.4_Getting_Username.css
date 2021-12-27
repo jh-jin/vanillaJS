@@ -1,0 +1,3 @@
+.hidden{
+    display: none; /* none: 공간도 사라짐, hidden: 공간 유지하며 invisible */
+}
