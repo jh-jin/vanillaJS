@@ -9,7 +9,8 @@ function onLoginSubmit(event){ //첫 인자는 event로 받는 게 관행
 
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const username = loginInput.value;
-    greeting.innerHTML = "Hello "+username;
+    //greeting.innerHTML = "Hello "+username;
+    greeting.innerHTML = `Hello ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
