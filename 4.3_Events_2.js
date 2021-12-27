@@ -12,9 +12,11 @@ function handleLink(event){
     event.preventDefault();
     alert("Clicked!");
     console.dir(event);
-    console.log(event.defaultPrevented);
+    console.log(event.defaultPrevented); //True
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
-link.addEventListener("click", handleLink);
 //addEventlistner는 onLoginSubmit의 첫번째 인자로 event를 넘겨준다.
+link.addEventListener("click", handleLink); 
+//중요한 건 우리가 아니라 브라우저가 handleLink 실행한다는 것. 
+//preventDefault를 하면 브라우저 동작 멈추고 우리가 통제하게 됨!
