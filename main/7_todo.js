@@ -1,14 +1,11 @@
-//localStorage에 array를 저장할 수 없다 only String!
-//JSON.stringify()
-//JSON.parse()
-//.forEach()
+//7.5 Loading toDos
 
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
-const toDos = [];
+const toDos = []; //그냥 두면 빈 array에 저장하므로 이전 값은 array에서 사라짐
 
 function deleteToDo(event){
     const li = event.target.parentElement;
@@ -52,6 +49,6 @@ console.log("S",savedToDos);
 
 if(savedToDos !== null){
     const parsedToDos = JSON.parse(savedToDos);
-    console.log("P",parsedToDos);
+    toDos = parsedToDos; //새로고침 이전 값 복원
     parsedToDos.forEach(paintToDo); //paintToDo("a"), paintToDo("b"), ..
 }
