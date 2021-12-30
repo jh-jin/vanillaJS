@@ -42,9 +42,10 @@ function handleToDoSubmit(event){
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-function sayHello(item){
-    console.log("this is the turn of", item);
-}
+// function sayHello(item){
+//     console.log("this is the turn of", item);
+// }
+// (item) => console.log("this is turn of", item)과 동일 문장
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 console.log("S",savedToDos);
@@ -52,5 +53,5 @@ console.log("S",savedToDos);
 if(savedToDos !== null){
     const parsedToDos = JSON.parse(savedToDos);
     console.log("P",parsedToDos);
-    parsedToDos.forEach(sayHello);
+    parsedToDos.forEach(paintToDo); //paintToDo("a"), paintToDo("b"), ..
 }
